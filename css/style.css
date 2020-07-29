@@ -1,0 +1,954 @@
+body {
+    font-family: 'Raleway', sans-serif, arial;
+}
+.container {
+    width: 1100px;
+    margin: auto;
+}
+
+@media screen and (max-width: 479px) {
+.container {width: 92%}
+}
+@media screen and (min-width: 480px) {
+.container {width: 95%}
+}
+@media screen and (min-width: 740px) {
+.container {width: 95%}
+}
+@media screen and (min-width: 960px) {
+.container {width: 95%}
+}
+@media screen and (min-width: 1200px) {
+.container {width: 1100px}
+}
+
+@media screen and (max-width: 575px) {
+.opentime {display: none;}
+}
+
+h1,h2,h3,h4,p,ul,ol,li,body {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+a {
+    transition: all 0.3s ease-out;
+}
+a:hover { 
+    transition: all 0.3s ease-out;
+}
+
+.topline {
+    background: rgba(0,59,39,0.7);
+    color: #fff;
+    font-size: 14px;
+    line-height: 37px;
+    font-family: 'Roboto', sans-serif;
+}
+.topline span {
+    margin-right: 20px;
+}
+.topline span a {
+    color: #fff;
+    text-decoration: none;
+}
+.topline span a:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+.toplinesoc {
+    float: right;
+    font-size:18px;
+}
+.toplinesoc a {
+    color: #fff;
+}
+.toplinesoc a:hover {
+    color: greenyellow;
+}
+.headermenu {
+    background: rgba(0,99,65,0.8);
+}
+
+.headermenu.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    background: url("../img/logo-kavarna.png") center center no-repeat;
+    width: 300px;
+    height: 90px;
+    float:left;
+}
+.menu {
+    float:right;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 35px 15px;
+    display: block;
+    border-radius: 10px;
+}
+.menu ul li a:hover {
+    background: rgba(255,255,255,0.3)
+}
+
+
+/*
+@media screen and (max-width: 850px) {
+.menu ul li a {padding: 35px 5px;}
+}
+@media screen and (max-width: 745px) {
+.logo {float: none; display: block; margin: auto;}
+.menu {float: none; display: block;}
+.menu ul li {display: block;}
+.menu ul li a {padding: 10px; display: inline-block;}
+.headermenu {text-align: center;}
+}
+*/
+
+/*Hamburger*/
+.mmenu-icon-wrapper {
+  position: absolute;
+  top: 3.9em;
+  right: 1.5em;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media screen and (min-width: 480px) {
+	.mmenu-icon-wrapper {
+	  top: 4.3em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.mmenu-icon-wrapper {
+	  top: 3.9em;
+	}
+}
+
+.mmenu-icon,
+.mmenu-icon:before,
+.mmenu-icon:after {
+  content: '';
+  position: absolute;
+  border-radius: 1em;
+  height: 2px;
+  width: 26px;
+  background: white;
+  transition: all 0.2s ease
+}
+
+.mmenu-icon {
+  top: 0.75em
+}
+
+.mmenu-icon:before {
+  top: -0.50em
+}
+
+.mmenu-icon:after {
+  top: 0.50em
+}
+
+.mmenu-active .mmenu-icon {
+  background: transparent;
+  transform: rotate(-135deg)
+}
+
+.mmenu-active .mmenu-icon:before,
+.mmenu-active .mmenu-icon:after {
+  top: 0
+}
+
+.mmenu-active .mmenu-icon:before {
+  transform: rotate(90deg)
+}
+
+.mmenu-active .mmenu-icon,
+.mmenu-active .mmenu-icon:before,
+.mmenu-active .mmenu-icon:after {
+  background: white
+}
+
+.mmenu-menu {
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.mmenu-active .mmenu-menu {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.mmenu-menu ul {
+  display: block;
+  transition: all 0.4s ease;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  font-size: 20px;
+  line-height: 200%;
+}
+
+.mmenu-menu ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.mmenu-menu ul li a:hover {
+	color: #5d9242;
+}
+
+.mmenu-active .mmenu-menu ul {
+  transform: translate(-50%, -50%) scale(1)
+}
+
+@media screen and (max-width: 960px) {
+	.menu {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.mmenu-menu, .mmenu-icon-wrapper {
+		display: none !important;
+	}
+}
+
+
+header {
+    background: url("../img/header.jpg") center no-repeat;
+    background-size: cover;
+}
+.spec {
+    text-align: right;
+    padding: 65px 0 165px;
+}
+.spec-text {
+    font-size: 34px;
+    color: #fff;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+.spec a {
+    color: #113524;
+    background: #e3c383;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*display: inline-block;*/
+}
+.spec a:hover {
+    color: #fff;
+}
+@media screen and (max-width: 850px) {
+.spec-text {font-size: 26px;}
+}
+@media screen and (max-width: 745px) {
+.spec {text-align: center;}
+.spec a:hover {color: red;}
+}
+.line {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: right;
+}
+.line p {
+    line-height: 22px;
+}
+.tym {
+    display: inline-block;
+    background: url("../img/obr1.png") left center no-repeat;
+    padding: 20px 50px 20px 70px;
+    text-align: left;
+}
+.kava {
+    display: inline-block;
+    background: url("../img/obr2.png") left center no-repeat;
+    padding: 20px 0 20px 70px;
+    text-align: left;
+}
+@media screen and (max-width: 630px) {
+.tym, .kava {display: block; margin-left: 30px;}
+}
+/*section*/
+.medovnik {
+    text-align: center;
+    background: #eac29a;
+    margin-top: 1px;
+    /*border-top: 20px solid white;*/
+}
+h1 {
+    color: #555;
+    font-size: 43px;
+    font-weight: 200;
+    padding: 45px 0;
+    text-align: center;
+}
+.med-text1 {
+    padding-bottom: 40px;
+}
+.medovnik img {
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+.med-text2 {
+    color: #a37854;
+    font-size: 53px;
+    font-weight: 900;
+    padding: 30px 0;
+}
+@media screen and (max-width: 1170px) {
+.medovnik img {width: 100%;}
+.med-text2 {font-size: 4.2vw;}
+}
+
+.nabidka {
+    padding: 50px 0 100px;
+}
+.levy {
+    float: left;
+    width: 500px;
+    margin-right: 100px;
+}
+.pravy {
+    float: left;
+    width: 500px;
+}
+.nabidka h2 {
+    color: #555;
+    padding-bottom: 20px;
+}
+.pravy p {
+    padding-bottom: 20px;
+}
+.pravy input[type="text"] {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 65%;
+}
+.pravy input[type="submit"] {
+    padding: 17px 30px;
+    font-size: 16px;
+    background: red;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+}
+.pravy input[type="submit"]:hover {
+    color: #000;
+    background: yellow;
+    cursor: pointer;
+}
+.cara {
+    background: #a37854;
+    width: 50px;
+    height: 5px;
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 1175px) {
+.levy {width: 45%; margin-right: 8%;}
+.pravy {width: 45%}
+}
+@media screen and (max-width: 1075px) {
+.pravy input[type="text"] {display: block; margin: 0 auto 10px;}
+.pravy input[type="submit"] {display: block; margin: auto;}
+}
+@media screen and (max-width: 850px) {
+.levy, .pravy {width: 100%; float: none; display: block;}
+.levy {margin-bottom: 40px;}
+.nabidka {text-align: center;}
+.cara {width: 30%; margin: 0 auto 25px;}
+}
+@media screen and (max-width: 400px) {
+.pravy input[type="text"] {width: 100%; text-align: center;}
+.pravy input[type="submit"] {width: 100%;}
+}
+
+
+/*Footer*/
+.fb {
+    background: grey;
+    width: 340px;
+    height: 155px;
+    position: relative;
+}
+
+.fb .kolecko {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 50%;
+    animation: testovaci-animace 5s infinite;
+}
+
+@keyframes testovaci-animace {
+    0% {
+        top: 0px;
+        left: 0%;
+    }
+    33% {
+        left: 30%;
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+    }
+    100% {
+        top: 100px;
+        left: 0%;
+    }
+}
+
+.pata {
+    background: #a37854;
+    color: #fff;
+    font-size: 14px;
+    padding: 40px 0;
+}
+.prvni {
+    float: left;
+    width: 340px;
+}
+.druhy {
+    float: left;
+    width: 340px;
+}
+.treti {
+    float: right;
+    width: 340px;
+}
+.pata h3 {
+    padding-bottom: 25px;
+}
+.pata ul li {
+    list-style: none;
+    line-height: 22px;
+}
+.prvni ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.prvni ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.copy {
+    font-size: 14px;
+    padding: 20px 0;
+}
+@media screen and (max-width: 1100px) {
+    .prvni {width: 25%}
+    .druhy {width: 25%}
+}
+@media screen and (max-width: 735px) {
+    .prvni {width: 40%}
+    .druhy {width: 40%}
+    .treti {display: none;}
+}
+@media screen and (min-width: 735px) {
+.face {display: none;}
+}
+@media screen and (max-width: 400px) {
+    .prvni {width: 100%; display: block; float: none; margin-bottom: 40px;}
+    .druhy {width: 100%; display: block; float: none;}
+    .pata, .copy {text-align: center;}
+}
+/*404*/
+.error {
+    padding: 120px 0;
+    text-align: center;
+    background: #e3c383;
+}
+.error p {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 60px;
+}
+.error a {
+    background: #a37854;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+}
+.error a:hover {
+    color: #000;
+}
+/*Kontakt*/
+.kontakt {
+    padding-bottom: 40px;
+	background: #eac29a;
+}
+.kon {
+    padding-bottom: 30px;
+}
+.adr {
+    float: left;
+    width: 70%
+}
+.doba {
+    float: left;
+    width: 30%
+}
+.kon h2 {
+    padding-bottom: 30px;
+}
+.kon p {
+    margin-bottom: 7px;
+}
+.adr p i {
+    margin-right: 15px;
+}
+.adr span {
+    font-weight: 700;
+    color: #a37854;
+    letter-spacing: 1px;
+}
+.adr a {
+    color: #000;
+    text-decoration: none;
+}
+.adr a:hover {
+    color: #a37854;
+    text-decoration: underline;
+}
+.karty {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.karty p {
+    padding-bottom: 15px;
+}
+.karty a {
+    text-decoration: none;
+    color: #fff;
+    background: #a37854;
+    padding: 15px 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.karty a:hover {
+    background: #e3c383;
+}
+.map iframe {
+    width: 100%;
+    vertical-align: top;
+}
+.map {
+    background: #000;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+.form {
+    text-align: center;
+}
+.form h2 {
+    font-weight: 200;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.form input[type="text"], .form textarea {
+    padding: 15px 30px;
+    font-size: 16px;
+    display: block;
+    width: 80%;
+    margin: 0 auto 5px;
+}
+.form textarea {
+    height: 130px;
+}
+.form input[type="submit"] {
+    background: red;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;   
+    transition: all 0.3s ease-out;
+}
+.form input[type="submit"]:hover {
+    color: #000;
+    background: yellow;
+    cursor: pointer;
+}
+/*Rezervace*/
+.rezervace {
+    padding-bottom: 40px;
+}
+.rez-text1 {
+    padding-bottom: 30px;
+}
+.rezervace p i {
+    margin: 0 10px 7px 0;
+}
+.rezervace a {
+    color: #000;
+    text-decoration: none;
+}
+.rezervace a:hover {
+    color: #a37854;
+    text-decoration: underline;
+}
+.rezervace span {
+    font-weight: 700;
+    color: #a37854;
+}
+.rez-text2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+.formular {
+    text-align: center;
+    margin: 20px 0;
+}
+.formular .wpcf7-text, .formular .wpcf7-textarea {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 70%;
+    display: block;
+    margin: 0 auto 10px;
+}
+.formular .wpcf7-textarea {
+    height: 120px;
+}
+.formular .wpcf7-submit {
+    background: red;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+.formular .wpcf7-submit:hover {
+    color: #000;
+    background: yellow;
+    cursor: pointer;
+}
+/*sablona*/
+.sablona {
+    color: green;
+}
+.sablona h1 {
+    color: red;
+    font-weight: 700;
+}
+/*Nabidka*/
+.nabidka-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.produkty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produkty div{
+    display: none;
+}
+
+.produkty div.active {
+    display: initial;
+}
+
+.kategorie h2.active {
+    background-color: peru;
+}
+
+.nab {
+    text-align: center;
+    padding-bottom: 40px;
+	background: #eac29a;
+}
+.nab p {
+    line-height: 24px;
+}
+.nab h2 {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    margin:  25px auto;
+    cursor: pointer;
+}
+.nab-btn {
+    background: red;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+.nab-btn:hover {
+    color: #000;
+    background: yellow;
+}
+.nab img {
+    border: none !important;
+    border-radius: 10px;
+}
+.nab img:hover {
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+/*Bonus*/
+.bonus {
+    padding-bottom: 40px;
+}
+.bonus p {
+    text-align: justify;
+    padding-bottom: 15px;
+}
+.bonus h2 {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto 25px;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.bonus-cas {
+    text-align: center;
+    color: #a37854;
+}
+.bonus-cas ul li {
+    list-style: none;
+    padding-bottom: 8px;
+}
+/*Příhlášení*/
+.prihlaseni li {
+    display: inline-block;
+    margin-right: 20px;
+    color: greenyellow;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #000;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+.prihlaseni {
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 3px;
+}
+.prihlaseni li a {
+    text-decoration: none;
+    color: greenyellow;
+}
+.prihlaseni li a:hover {
+    color: yellow;
+}
+/*Blog*/
+.blog {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+.blog:last-of-type {
+    border: none;
+}
+.obr-blog {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+}
+.blog-text {
+    float: left;
+    width: 70%;
+}
+.blog img, .nab img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.blog-text h2 {
+    margin-bottom: 30px;
+}
+.blog-text h2 a {
+    color: #000;
+    text-decoration: none;
+}
+.blog-text h2 a:hover {
+    color: green;
+    text-decoration: underline;
+}
+.blog-text span {
+    display: block;
+}
+.blog-text span i {
+    margin: 0 15px 8px 0;
+}
+.blog-tl {
+    padding: 15px 30px;
+    background: #e3c383;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.blog-tl:hover {
+    background: #a37854;
+}
+.blog-text p {
+    margin-bottom: 30px;
+}
+.blog-text span a {
+    color: #a37854;
+    text-decoration: none;
+    font-weight: 700;
+}
+.blog-text span a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+.older a, .newer a {
+    padding: 15px 30px;
+    background: #e3c383;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.older a:hover, .newer a:hover {
+    background: #a37854;
+    color: #fff;
+}
+.older {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.newer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.sipky {
+    position: relative;
+}
+/*Příspevky*/
+.prispevky h2 {
+    padding-bottom: 30px;
+    font-weight: 200;
+    text-align: center;
+}
+.prispevky p {
+    padding-bottom: 20px;
+}
+.prispevky h3 {
+    padding-bottom: 25px;
+}
+.ikony {
+    text-align: center;
+}
+.ikony span {
+    margin-right: 20px;
+}
+.ikony span a {
+    color: #a37854;
+    font-weight: 700;
+    text-decoration: none;
+}
+.ikony span a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.prispevky .back {
+    padding: 15px 30px;
+    background: #e3c383;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px 0;
+}
+.singleblog {
+    height: 300px;
+}
+
+#backToTop {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#backToTop:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* neviditelne sekce */
+section .container {
+    transition: all 1s;
+
+}
+
+.invisible {
+    opacity: 0;
+    transform: translateY(30px);
+}

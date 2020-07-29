@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>PrimaKavárna</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    </head>
+    <body>
+        <header id="home" >
+            <div class="topline">
+                <div class="container">
+                    <span>
+                        <i class="fas fa-phone fa-rotate-90"></i>
+                        <a href="tel:+420606123456">606 123 456</a>
+                    </span>
+                    <span>
+                       <i class="fas fa-globe-americas"></i>
+                       <a href="https://goo.gl/maps/jhRbB22RJt52" target="_blank">Jablonského 2, Praha</a>
+                    </span>
+                    <span class="opentime"><i class="far fa-clock"></i>
+                        Otevřeno: Po - Pá: 10 - 20h
+                    </span>
+                    <div class="toplinesoc">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="headermenu">
+                <div class="container clearfix">
+                    <a href="#" class="logo"></a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#home">Domů</a></li>
+                            <li><a href="#special-offer">Speciální nabídka</a></li>
+                            <li><a href="#normal-offer">Stálá nabídka</a></li>
+                            <li><a href="#booking">Rezervace</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec">
+                <div class="container">
+                    <div class="spec-text">
+                        <p>Netradiční kavárna, kde</p>
+                        <p>najdeš mnohem více než jen</p>
+                        <p>výběrovou kávu a dezerty.</p>
+                    </div>
+                    <a href="#">
+                        <i class="fas fa-angle-double-right"></i>
+                        Specialní nabídka
+                    </a>
+                </div>
+            </div>
+            
+            <div class="line">
+                <div class="container">
+                    <div class="tym">
+                        <p><b>Dnes Vás přivítá tým:</b></p>
+                        <p>René, Radek, Radka, Renata</p>
+                    </div>
+                    <div class="kava">
+                        <p><b>Právě podáváme kávu:</b></p>
+                        <p>z Guatemaly a Kostariky</p>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        
+        
+        <section id="special-offer">
+            <div class="medovnik">
+                <div class="container invisible">
+                    <h1>Speciální nabídka</h1>
+                    <p class="med-text1">
+                        Vychutnejte si naše nejlepší dobroty přímo v menu
+                    </p>
+                    <img src="img/medovnik.jpg" alt="Medovník">
+                    <p class="med-text2">
+                        Nejmedovější medovník jen za 69,-&nbsp;Kč
+                    </p>
+                </div>
+            </div>
+            
+            <div class="nabidka">
+                <div class="container clearfix invisible">
+                    <div class="levy">
+                        <div class="cara"></div>
+                        <h2>Každé pondělí druhé cappuccino zdarma</h2>
+                        <p>Zajděte si k nám v pondělí dopoledne pro cappuccino s sebou a získáte pro 
+                           Vaše hezčí pondělí druhé cappuccino ZDARMA! 
+                           Děláme vše pro vaše hezké pondělky! 
+                        </p>
+                    </div>
+                    <div class="pravy">
+                        <div class="cara"></div>
+                        <h2>Zasílat akční nabídky na e-mail</h2>
+                        <p>Nepropásněte akce na naší kávu a dezerty u nás v kavárně </p>
+                        <form action="#" method="get">
+						<input type="text" name="mail" placeholder="Zadejte Váš e-mail">
+						<input type="submit" value="Odeslat">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+		<section id="normal-offer">
+            <div class="nab">
+                <div class="container invisible">
+                    <h1>Nabízíme</h1>
+
+                    <div class="nabidka-container">
+                        <div class="kategorie">
+                            <h2 data-kategorie="#espresso" class="active">ESPRESSO</h2>
+                            <h2 data-kategorie="#dezerty">DEZERTY</h2>
+                            <h2 data-kategorie="#snidane">SNÍDANĚ</h2>
+                            <h2 data-kategorie="#nealko">NEALKO</h2>
+                        </div>
+    
+                        <div class="produkty">
+                            <div id="espresso" class="active">
+                                <p>Espresso / 45 Kč</p>
+                                <p>Espresso Macchiato / 55 Kč</p>
+                                <p>Cappuccino / 60 Kč</p>
+                                <p>Double espresso / 65 Kč</p>
+                                <p>Flat White / 60 Kč</p>
+                                <p>Cafe Latte / 80 Kč</p>
+                                <p>Espresso Tonic / 80 Kč</p>
+                                <p>Irish Coffee / 135 Kč</p>
+                            </div>
+    
+                            <div id="dezerty">
+                                <p>Cheesecake / 69 Kč</p>
+                                <p>Mrkvový dortík / 79 Kč</p>
+                                <p>Muffin čokoládový / 50 Kč</p>
+                                <p>Skořicový rohlíček / 59 Kč</p>
+                                <p>Apple Pie / 49 Kč</p>
+                                <p>Panna Cotta / 55 Kč</p>
+                            </div>
+    
+                            <div id="snidane">
+                                <p>Vejce Benedict soufflé / 135 Kč</p>
+                                <p>Vejce Florenine soufflé / 135 Kč</p>
+                                <p>Bürcher müsli s mátovým sirupem a ovocem / 90 Kč</p>
+                            </div>
+    
+                            <div id="nealko">
+                                <p>Domácí limonády 0,25L / 40 Kč</p>
+                                <p>Fentimans Giner beer 0,125L / 65 Kč</p>
+                                <p>Fentimans limonády 0,275L / 65 Kč</p>
+                                <p>Thomas Henry Grapefruit 0,2L / 55 Kč</p>
+                                <p>Fritz Cola 0,33L / 45 Kč</p>
+                                <p>Fritz Cola light 0,33L / 40 Kč</p>
+                                <p>Juice 0,2L / 30 Kč</p>
+                                <p>John Lemon limonády 0,33L / 32 Kč</p>
+                                <p>Minerální voda Coralba 0,25L / 20 Kč</p>
+                                <p>Minerální voda Coralba 0,75L / 40 Kč</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+		
+		<section id="booking">
+            <div class="rezervace">
+                <div class="container invisible">
+                    <h1>Rezervace</h1>
+                    <p class="rez-text1">Pokud si chcete odpočinou v příjemném prostředí naší kavárny, pobavit se s přáteli či obchodními partnery, rozhodně Vám doporučujeme zarezervovat si vhodný počet míst.</p>
+                    
+                    <p><i class="fas fa-phone fa-rotate-90"></i>
+                        Volat můžete na mob: 
+                        <a href="tel:+420606123456">606 123 456</a>
+                    </p>
+                    <p><i class="far fa-envelope"></i>
+                        Psát na mail:
+                        <span>rezervace@primakavarna.cz</span>
+                    </p>
+                    <p><i class="fab fa-wpforms"></i>
+                        Nebo můžete využít náš rezervační formulář
+                    </p>
+                    
+                    
+                    <div class="formular">
+                        
+                    </div>
+                    
+                    <p class="rez-text2">Těšíme se na Vaší návštěvu, brzy na viděnou.</p>
+                </div>
+            </div>
+        </section>
+		
+		<section id="contact">
+            <div class="kontakt">
+                <div class="container invisible">
+                    <h1>Kontakt</h1>
+                    <div class="kon clearfix">
+                        <div class="adr">
+                            <h2>Adresa</h2>
+                            <p><b>PrimaKavárna, Jablonského 2, Holešovice</b></p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <span>info@primakavarna</span>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone fa-rotate-90"></i>
+                                <a href="+420606123456">606 123 456</a>
+                            </p>
+                        </div>
+                        <div class="doba">
+                            <h2>Otevřeno</h2>
+                            <p>Po - Pá: 8 - 20h</p>
+                            <p>So: 10 - 22h</p>
+                            <p>Ne: Zavřeno</p>
+                        </div>
+                    </div>
+                    <div class="karty">
+                        <p>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            Přijímáme platební karty
+                        </p>
+                        <a href="#">Rezervovat místo</a>
+                    </div>
+                </div>
+                
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.897361715725!2d14.438857015718977!3d50.106928079429444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94b58408a5a5%3A0xf6d0a16b74286ecf!2sJablonsk%C3%A9ho+640%2F2%2C+170+00+Praha+7-Hole%C5%A1ovice!5e0!3m2!1scs!2scz!4v1538046746229" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                
+                <div class="container invisible">
+                    <div class="form">
+                        <h2>Váš názor</h2>
+                        <form action="#" method="get">
+							<input type="text" name="jmeno" placeholder="Jméno">
+							<input type="text" name="prijm" placeholder="Příjmení">
+							<input type="text" name="mail" placeholder="E-mail">
+							<textarea name="vzkaz" placeholder="Naište nám vzkaz..."></textarea>
+							<input type="submit" value="Odeslat">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <footer>
+            
+            <div class="pata">
+                <div class="container clearfix">
+                    <div class="prvni">
+                        <h3>Menu</h3>
+                         <ul>
+                            <li><a href="#">Domů</a></li>
+                            <li><a href="#">Rezervace</a></li>
+                            <li><a href="#">Galerie</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li class="face"><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+                    <div class="druhy">
+                        <h3>Kontakt</h3>
+                        <ul>
+                            <li>PrimaKavárna</li>
+                            <li>Jablonského 2, Praha</li>
+                            <li>Holešovice</li>
+                        </ul>
+                    </div>
+                    <div class="treti">
+                        <div class="fb">
+                            <div class="kolecko"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="container">
+                    &copy; Copyright 2018 <b>PrimaKavárna</b>
+                </div>
+            </div>
+        </footer>
+        <button id="backToTop" title="Go to top">Top</button>
+
+        <script src="./vendor/jQuery/jquery-3.3.1.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
